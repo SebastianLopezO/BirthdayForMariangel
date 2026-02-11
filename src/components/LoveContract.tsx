@@ -33,18 +33,18 @@ const LoveContract = () => {
   };
 
   return (
-    <section className="relative z-20 py-20 px-4 bg-secondary/10">
+    <section className="relative z-20 py-20 px-4 bg-birthday-lavender/10">
       <div className="max-w-lg mx-auto">
-        <div className="bg-card/40 backdrop-blur-sm border border-primary/20 rounded-2xl p-6 sm:p-8">
+        <div className="bg-background border-2 border-birthday-gold/20 rounded-2xl p-6 sm:p-8 shadow-lg">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="inline-block px-4 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-              <span className="text-xs font-body tracking-widest uppercase text-primary/80">Documento oficial</span>
+            <div className="inline-block px-4 py-1 rounded-full bg-birthday-gold/15 border-2 border-birthday-gold/20 mb-4">
+              <span className="text-xs font-body tracking-widest uppercase text-birthday-chocolate/70">Documento oficial</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-display text-primary mb-2">
-              Contrato de Cumpleaños 🎂📜
+            <h2 className="text-3xl sm:text-4xl font-display text-birthday-chocolate mb-2">
+              📜 Contrato de Cumpleaños
             </h2>
-            <p className="font-elegant italic text-muted-foreground">
+            <p className="font-body text-muted-foreground">
               Promesas vigentes desde tu cumpleaños hasta la eternidad
             </p>
           </div>
@@ -55,10 +55,10 @@ const LoveContract = () => {
               <div
                 key={clause.id}
                 onClick={() => toggle(clause.id)}
-                className={`flex items-start gap-3 p-3 rounded-xl cursor-pointer transition-all duration-300 border ${
+                className={`flex items-start gap-3 p-3 rounded-xl cursor-pointer transition-all duration-300 border-2 ${
                   checked.has(clause.id)
-                    ? "bg-primary/10 border-primary/30 scale-[1.02]"
-                    : "bg-card/20 border-transparent hover:bg-card/40 hover:border-primary/10"
+                    ? "bg-birthday-gold/10 border-birthday-gold/30 scale-[1.02]"
+                    : "bg-transparent border-transparent hover:bg-birthday-cream hover:border-birthday-gold/10"
                 } ${signed ? "pointer-events-none" : ""}`}
                 style={{
                   animation: "fade-in-up 0.5s ease-out forwards",
@@ -66,12 +66,11 @@ const LoveContract = () => {
                   opacity: 0,
                 }}
               >
-                {/* Custom checkbox */}
                 <div
                   className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-all duration-300 ${
                     checked.has(clause.id)
-                      ? "bg-primary border-primary scale-110"
-                      : "border-primary/40 hover:border-primary/60"
+                      ? "bg-birthday-gold border-birthday-gold scale-110"
+                      : "border-birthday-gold/40 hover:border-birthday-gold/60"
                   }`}
                 >
                   {checked.has(clause.id) && (
@@ -79,54 +78,52 @@ const LoveContract = () => {
                   )}
                 </div>
 
-                <div className="flex-1">
-                  <p className={`font-body text-sm transition-colors duration-300 ${
-                    checked.has(clause.id) ? "text-foreground" : "text-foreground/70"
-                  }`}>
-                    <span className="mr-2">{clause.emoji}</span>
-                    {clause.text}
-                  </p>
-                </div>
+                <p className={`font-body text-sm transition-colors duration-300 ${
+                  checked.has(clause.id) ? "text-foreground" : "text-foreground/70"
+                }`}>
+                  <span className="mr-2">{clause.emoji}</span>
+                  {clause.text}
+                </p>
               </div>
             ))}
           </div>
 
-          {/* Sign button */}
+          {/* Sign */}
           <div className="text-center">
             {!signed ? (
               <button
                 onClick={() => allChecked && setSigned(true)}
                 disabled={!allChecked}
-                className={`px-8 py-4 rounded-xl font-body font-bold text-lg transition-all duration-500 ${
+                className={`px-8 py-4 rounded-2xl font-body font-bold text-lg transition-all duration-500 ${
                   allChecked
-                    ? "bg-primary text-primary-foreground hover:scale-105 hover:shadow-[0_0_30px_hsl(340,80%,60%/0.3)] animate-glow-pulse cursor-pointer"
+                    ? "bg-birthday-coral text-primary-foreground hover:scale-105 hover:shadow-lg cursor-pointer animate-pulse-scale"
                     : "bg-secondary text-muted-foreground cursor-not-allowed opacity-60"
                 }`}
               >
                 {allChecked ? "Firmar con cariño ✍️🎂" : `Faltan ${CLAUSES.length - checked.size} promesas...`}
               </button>
             ) : (
-              <div className="animate-fade-in-up space-y-4">
-                <div className="inline-block px-8 py-6 rounded-2xl bg-primary/10 border border-primary/30">
+              <div className="animate-bounce-in space-y-4">
+                <div className="inline-block px-8 py-6 rounded-2xl bg-birthday-gold/10 border-2 border-birthday-gold/30">
                   <p className="text-3xl mb-2">🎉</p>
-                  <p className="text-xl font-display text-primary">
-                    ¡Contrato de cumpleaños firmado! 🎉
+                  <p className="text-xl font-display text-birthday-chocolate">
+                    ¡Contrato firmado!
                   </p>
-                  <p className="font-elegant italic text-muted-foreground mt-1">
+                  <p className="font-body text-muted-foreground mt-1">
                     Promesas vigentes desde hoy hasta la eternidad ∞
                   </p>
-                  <div className="mt-3 font-display text-2xl text-primary/60 rotate-[-5deg]">
-                    Mariangel ♥
+                  <div className="mt-3 font-cursive text-4xl text-birthday-pink/60 rotate-[-5deg]">
+                    Mariangel
                   </div>
                 </div>
               </div>
             )}
           </div>
 
-          {/* Decorative stamp */}
+          {/* Stamp */}
           <div className="mt-6 flex justify-center opacity-30">
-            <div className="w-16 h-16 rounded-full border-2 border-dashed border-primary/40 flex items-center justify-center">
-              <span className="text-xs font-body text-primary/60">SELLO</span>
+            <div className="w-16 h-16 rounded-full border-2 border-dashed border-birthday-gold/40 flex items-center justify-center">
+              <span className="text-xs font-body text-birthday-gold/60">SELLO</span>
             </div>
           </div>
         </div>

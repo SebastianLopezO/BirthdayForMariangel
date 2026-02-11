@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Quicksand:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Quicksand:wght@300;400;500;600&family=Sacramento&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,53 +6,57 @@
 
 @layer base {
   :root {
-    --background: 340 30% 10%;
-    --foreground: 340 20% 95%;
+    --background: 45 30% 96%;
+    --foreground: 30 20% 15%;
 
-    --card: 340 25% 14%;
-    --card-foreground: 340 20% 95%;
+    --card: 40 30% 92%;
+    --card-foreground: 30 20% 15%;
 
-    --popover: 340 25% 14%;
-    --popover-foreground: 340 20% 95%;
+    --popover: 40 30% 92%;
+    --popover-foreground: 30 20% 15%;
 
-    --primary: 340 80% 60%;
+    --primary: 330 70% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 340 40% 20%;
-    --secondary-foreground: 340 20% 90%;
+    --secondary: 45 50% 88%;
+    --secondary-foreground: 30 30% 25%;
 
-    --muted: 340 20% 18%;
-    --muted-foreground: 340 15% 65%;
+    --muted: 40 20% 90%;
+    --muted-foreground: 30 15% 45%;
 
-    --accent: 20 80% 65%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 38 85% 55%;
+    --accent-foreground: 30 20% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 340 30% 22%;
-    --input: 340 30% 22%;
-    --ring: 340 80% 60%;
+    --border: 35 25% 82%;
+    --input: 35 25% 82%;
+    --ring: 330 70% 50%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    --rose-soft: 340 60% 75%;
-    --rose-deep: 345 85% 45%;
-    --gold-warm: 38 70% 60%;
-    --blush: 350 40% 85%;
+    --birthday-pink: 330 70% 55%;
+    --birthday-gold: 38 85% 55%;
+    --birthday-cream: 45 40% 95%;
+    --birthday-chocolate: 25 50% 30%;
+    --birthday-teal: 175 50% 45%;
+    --birthday-lavender: 260 40% 75%;
+    --birthday-coral: 15 80% 60%;
+    --birthday-mint: 155 40% 70%;
 
-    --sidebar-background: 340 30% 10%;
-    --sidebar-foreground: 340 20% 95%;
-    --sidebar-primary: 340 80% 60%;
+    --sidebar-background: 45 30% 96%;
+    --sidebar-foreground: 30 20% 15%;
+    --sidebar-primary: 330 70% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 340 40% 20%;
-    --sidebar-accent-foreground: 340 20% 90%;
-    --sidebar-border: 340 30% 22%;
-    --sidebar-ring: 340 80% 60%;
+    --sidebar-accent: 45 50% 88%;
+    --sidebar-accent-foreground: 30 30% 25%;
+    --sidebar-border: 35 25% 82%;
+    --sidebar-ring: 330 70% 50%;
 
-    --font-display: 'Dancing Script', cursive;
+    --font-display: 'Baloo 2', cursive;
     --font-body: 'Quicksand', sans-serif;
-    --font-elegant: 'Cormorant Garamond', serif;
+    --font-cursive: 'Sacramento', cursive;
   }
 }
 
@@ -72,31 +76,88 @@
   }
 }
 
-/* Falling hearts animation */
-@keyframes fall {
+/* Confetti animation */
+@keyframes confetti-fall {
   0% {
     transform: translateY(-10vh) rotate(0deg);
     opacity: 1;
   }
   100% {
     transform: translateY(110vh) rotate(720deg);
-    opacity: 0;
+    opacity: 0.3;
   }
+}
+
+@keyframes confetti-sway {
+  0%, 100% { transform: translateX(0px) rotateY(0deg); }
+  25% { transform: translateX(20px) rotateY(90deg); }
+  50% { transform: translateX(-10px) rotateY(180deg); }
+  75% { transform: translateX(15px) rotateY(270deg); }
+}
+
+@keyframes balloon-float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+@keyframes flame-flicker {
+  0%, 100% { transform: scaleY(1) scaleX(1); opacity: 1; }
+  25% { transform: scaleY(1.2) scaleX(0.8); opacity: 0.9; }
+  50% { transform: scaleY(0.9) scaleX(1.1); opacity: 1; }
+  75% { transform: scaleY(1.15) scaleX(0.9); opacity: 0.85; }
+}
+
+@keyframes inflate {
+  0% { transform: scale(0.3); }
+  100% { transform: scale(1); }
+}
+
+@keyframes pop-burst {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes gentle-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 15px hsl(330 70% 50% / 0.2); }
+  50% { box-shadow: 0 0 35px hsl(330 70% 50% / 0.5); }
+}
+
+@keyframes float-particle {
+  0% { transform: translateY(0); opacity: 0.4; }
+  50% { opacity: 0.7; }
+  100% { transform: translateY(-100vh); opacity: 0; }
 }
 
 @keyframes sway {
   0%, 100% { transform: translateX(0px); }
-  50% { transform: translateX(30px); }
-}
-
-@keyframes pulse-heart {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-}
-
-@keyframes float-up {
-  0% { transform: translateY(0) scale(1); opacity: 0.8; }
-  100% { transform: translateY(-100px) scale(0.5); opacity: 0; }
+  50% { transform: translateX(20px); }
 }
 
 @keyframes envelope-open {
@@ -109,35 +170,9 @@
   100% { transform: translateY(-80px); }
 }
 
-@keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-
-@keyframes gentle-bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-@keyframes fade-in-up {
-  0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 20px hsl(340 80% 60% / 0.3); }
-  50% { box-shadow: 0 0 40px hsl(340 80% 60% / 0.6); }
-}
-
 @keyframes gift-bounce {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.05); }
-}
-
-@keyframes float-particle {
-  0% { transform: translateY(0); opacity: 0.4; }
-  50% { opacity: 0.7; }
-  100% { transform: translateY(-100vh); opacity: 0; }
 }
 
 @keyframes audio-bar {
@@ -145,30 +180,30 @@
   100% { height: 24px; }
 }
 
-.animate-fall {
-  animation: fall linear infinite;
+@keyframes cake-drip {
+  0% { height: 0; }
+  100% { height: 20px; }
 }
 
-.animate-sway {
-  animation: sway ease-in-out infinite;
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(180deg); }
 }
 
-.animate-pulse-heart {
-  animation: pulse-heart 1.5s ease-in-out infinite;
+.animate-confetti-fall {
+  animation: confetti-fall linear infinite;
 }
 
-.animate-envelope-open {
-  animation: envelope-open 1s ease-out forwards;
-  transform-origin: top center;
+.animate-balloon-float {
+  animation: balloon-float 3s ease-in-out infinite;
 }
 
-.animate-letter-rise {
-  animation: letter-rise 1s ease-out 0.5s forwards;
+.animate-flame {
+  animation: flame-flicker 0.4s ease-in-out infinite;
 }
 
-.animate-shimmer {
-  background-size: 200% auto;
-  animation: shimmer 3s linear infinite;
+.animate-bounce-in {
+  animation: bounce-in 0.6s ease-out forwards;
 }
 
 .animate-gentle-bounce {
@@ -180,6 +215,15 @@
   opacity: 0;
 }
 
+.animate-pulse-scale {
+  animation: pulse-scale 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
 .animate-glow-pulse {
   animation: glow-pulse 2s ease-in-out infinite;
 }
@@ -188,14 +232,35 @@
   animation: gift-bounce 1.5s ease-in-out infinite;
 }
 
+.animate-pulse-heart {
+  animation: pulse-scale 1.5s ease-in-out infinite;
+}
+
+.animate-fall {
+  animation: confetti-fall linear infinite;
+}
+
+.animate-sway {
+  animation: sway ease-in-out infinite;
+}
+
+.animate-envelope-open {
+  animation: envelope-open 1s ease-out forwards;
+  transform-origin: top center;
+}
+
+.animate-letter-rise {
+  animation: letter-rise 1s ease-out 0.5s forwards;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(340 30% 10%);
+  background: hsl(45 30% 94%);
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(340 80% 60% / 0.5);
+  background: hsl(330 70% 50% / 0.4);
   border-radius: 3px;
 }

@@ -33,144 +33,77 @@ const REASONS = [
   "Todo tu hermoso ser ♥",
 ];
 
-const FloatingNote = ({
-  reason,
-  index,
-  total,
-  onClick,
-}: {
-  reason: string;
-  index: number;
-  total: number;
-  onClick: () => void;
-}) => {
-  const row = Math.floor(index / 5);
-  const col = index % 5;
-  const x = 12 + col * 18 + (Math.random() * 6 - 3);
-  const y = 15 + row * 12 + (Math.random() * 4 - 2);
-  const rotation = Math.random() * 30 - 15;
-  const colors = [
-    "hsl(340, 80%, 60%)",
-    "hsl(345, 85%, 50%)",
-    "hsl(340, 60%, 70%)",
-    "hsl(20, 80%, 65%)",
-    "hsl(350, 70%, 55%)",
-    "hsl(338, 90%, 55%)",
-  ];
-  const color = colors[index % colors.length];
-
-  return (
-    <div
-      className="absolute cursor-pointer transition-all duration-500 hover:scale-150 hover:z-30 group"
-      style={{
-        left: `${x}%`,
-        top: `${y}%`,
-        transform: `rotate(${rotation}deg)`,
-        animation: `sway ${2 + (index % 3)}s ease-in-out infinite`,
-        animationDelay: `${(index * 0.15)}s`,
-      }}
-      onClick={onClick}
-    >
-      <div className="relative">
-        <span style={{ color, fontSize: `${10 + Math.random() * 8}px` }}>♥</span>
-        <div className="absolute left-1/2 -translate-x-1/2 -top-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap bg-card/90 backdrop-blur-sm border border-primary/30 rounded-lg px-3 py-1.5 text-xs font-elegant italic text-primary pointer-events-none z-40">
-          {reason}
-        </div>
-      </div>
-    </div>
-  );
-};
+const GIFT_COLORS = [
+  "hsl(330, 70%, 55%)",
+  "hsl(38, 85%, 55%)",
+  "hsl(175, 50%, 45%)",
+  "hsl(260, 40%, 65%)",
+  "hsl(15, 80%, 60%)",
+  "hsl(50, 90%, 60%)",
+];
 
 const ReasonsJar = () => {
-  const [revealedCount, setRevealedCount] = useState(0);
   const [showAll, setShowAll] = useState(false);
+  const [revealedIndex, setRevealedIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative z-20 py-20 px-4">
+    <section className="relative z-20 py-20 px-4 bg-birthday-cream">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-display text-primary text-center mb-4">
-          Millones de razones para celebrarte 🎉
+        <h2 className="text-3xl sm:text-4xl font-display text-birthday-chocolate text-center mb-2">
+          🎁 Razones para celebrarte
         </h2>
-        <p className="text-center text-muted-foreground font-elegant italic text-lg mb-12">
-          Pasa el cursor sobre los corazones para descubrir algunas...
+        <p className="text-center text-muted-foreground font-body text-lg mb-10">
+          Cada regalo esconde una razón... ¡toca uno!
         </p>
 
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          {/* The Jar */}
-          <div className="relative w-64 h-80 sm:w-72 sm:h-96 mx-auto flex-shrink-0">
-            {/* Jar body */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-52 sm:w-60 h-64 sm:h-72 rounded-b-[2rem] border-2 border-primary/30 bg-card/20 backdrop-blur-sm overflow-hidden">
-              {/* Glass shine */}
-              <div className="absolute top-0 left-2 w-3 h-full bg-gradient-to-b from-primary/10 via-primary/5 to-transparent rounded-full" />
-              <div className="absolute top-0 right-4 w-1.5 h-3/4 bg-gradient-to-b from-primary/8 to-transparent rounded-full" />
-
-              {/* Hearts inside jar */}
-              {REASONS.map((reason, i) => (
-                <FloatingNote
-                  key={i}
-                  reason={reason}
-                  index={i}
-                  total={REASONS.length}
-                  onClick={() => setRevealedCount((c) => c + 1)}
-                />
-              ))}
-
-              {/* Overflow hearts spilling out the top */}
-              {[...Array(8)].map((_, i) => (
-                <div
-                  key={`overflow-${i}`}
-                  className="absolute text-primary"
-                  style={{
-                    top: `${-5 - i * 3}%`,
-                    left: `${20 + i * 8}%`,
-                    fontSize: `${12 + Math.random() * 6}px`,
-                    transform: `rotate(${Math.random() * 40 - 20}deg)`,
-                    animation: `gentle-bounce ${2 + i * 0.3}s ease-in-out infinite`,
-                    animationDelay: `${i * 0.2}s`,
-                    opacity: 0.8,
-                  }}
-                >
-                  ♥
-                </div>
-              ))}
-            </div>
-
-            {/* Jar lid */}
-            <div className="absolute bottom-[calc(100%-7rem)] sm:bottom-[calc(100%-6rem)] left-1/2 -translate-x-1/2 w-44 sm:w-48 h-6 rounded-t-lg bg-secondary border-2 border-primary/30 border-b-0" />
-            <div className="absolute bottom-[calc(100%-5.5rem)] sm:bottom-[calc(100%-4.5rem)] left-1/2 -translate-x-1/2 w-48 sm:w-52 h-3 rounded-t-md bg-secondary/80 border-x-2 border-t-2 border-primary/20" />
-
-            {/* Label */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-card/60 backdrop-blur-sm border border-primary/20 rounded-lg px-4 py-1.5 z-20">
-              <p className="text-xs font-elegant italic text-primary whitespace-nowrap">Razones infinitas ∞</p>
-            </div>
-          </div>
-
-          {/* Side text */}
-          <div className="text-center md:text-left space-y-4 max-w-sm">
-            <p className="font-elegant italic text-lg text-foreground/85 leading-relaxed">
-              Podría describirte en dos simples palabras, pero para descubrir lo hermosa que eres hay que ir más a fondo...
-            </p>
-            <p className="font-elegant italic text-foreground/70 leading-relaxed">
-              Hay tanto de ti en mi ser que es imposible olvidarte. Cada recuerdo, cada foto, cada conversación eterna es una razón más para amarte.
-            </p>
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="mt-4 px-6 py-3 rounded-xl font-body font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg bg-primary/20 text-primary border border-primary/30 hover:bg-primary/30"
+        {/* Gift grid */}
+        <div className="grid grid-cols-5 sm:grid-cols-6 gap-3 sm:gap-4 max-w-2xl mx-auto mb-8">
+          {REASONS.slice(0, 18).map((reason, i) => (
+            <div
+              key={i}
+              className="relative cursor-pointer group"
+              onClick={() => setRevealedIndex(revealedIndex === i ? null : i)}
             >
-              {showAll ? "Ocultar razones" : "Revelar algunas razones"} 💝
-            </button>
-
-            {showAll && (
-              <div className="mt-4 space-y-2 animate-fade-in-up">
-                {REASONS.slice(0, 10).map((r, i) => (
-                  <p key={i} className="text-sm font-elegant italic text-muted-foreground flex items-center gap-2">
-                    <span className="text-primary text-xs">♥</span> {r}
-                  </p>
-                ))}
-                <p className="text-sm font-elegant italic text-primary mt-2">...y millones más ∞</p>
+              <div
+                className={`w-full aspect-square rounded-xl flex items-center justify-center text-2xl sm:text-3xl transition-all duration-500 border-2 ${
+                  revealedIndex === i
+                    ? "scale-110 shadow-lg border-birthday-gold"
+                    : "hover:scale-105 border-transparent hover:border-birthday-gold/30"
+                }`}
+                style={{
+                  backgroundColor: `${GIFT_COLORS[i % GIFT_COLORS.length]}20`,
+                }}
+              >
+                {revealedIndex === i ? "💝" : "🎁"}
               </div>
-            )}
-          </div>
+
+              {/* Tooltip */}
+              {revealedIndex === i && (
+                <div className="absolute left-1/2 -translate-x-1/2 -bottom-16 z-40 bg-background border-2 border-birthday-gold/30 rounded-xl px-4 py-2 shadow-lg whitespace-nowrap animate-bounce-in">
+                  <p className="text-xs sm:text-sm font-body text-foreground">{reason}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="px-6 py-3 rounded-2xl font-body font-semibold transition-all duration-300 hover:scale-105 bg-birthday-gold/20 text-birthday-chocolate border-2 border-birthday-gold/30 hover:bg-birthday-gold/30"
+          >
+            {showAll ? "Ocultar" : "Ver todas las razones"} 🎉
+          </button>
+
+          {showAll && (
+            <div className="mt-6 grid sm:grid-cols-2 gap-2 text-left animate-fade-in-up max-w-xl mx-auto">
+              {REASONS.map((r, i) => (
+                <p key={i} className="text-sm font-body text-foreground/80 flex items-center gap-2 py-1">
+                  <span className="text-birthday-coral">🎈</span> {r}
+                </p>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>

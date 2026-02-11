@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Dancing Script', 'cursive'],
+        display: ['Baloo 2', 'cursive'],
         body: ['Quicksand', 'sans-serif'],
-        elegant: ['Cormorant Garamond', 'serif'],
+        cursive: ['Sacramento', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -52,14 +52,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        rose: {
-          soft: "hsl(var(--rose-soft))",
-          deep: "hsl(var(--rose-deep))",
+        birthday: {
+          pink: "hsl(var(--birthday-pink))",
+          gold: "hsl(var(--birthday-gold))",
+          cream: "hsl(var(--birthday-cream))",
+          chocolate: "hsl(var(--birthday-chocolate))",
+          teal: "hsl(var(--birthday-teal))",
+          lavender: "hsl(var(--birthday-lavender))",
+          coral: "hsl(var(--birthday-coral))",
+          mint: "hsl(var(--birthday-mint))",
         },
-        gold: {
-          warm: "hsl(var(--gold-warm))",
-        },
-        blush: "hsl(var(--blush))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

@@ -26,13 +26,12 @@ const HeartMonitor = () => {
     let offset = 0;
     let animId: number;
 
-    const bgColor = "hsl(340, 30%, 8%)";
-    const lineColor = "hsl(340, 100%, 65%)";
-    const gridColor = "hsla(340, 80%, 60%, 0.08)";
+    const bgColor = "hsl(40, 25%, 94%)";
+    const lineColor = "hsl(330, 70%, 55%)";
+    const gridColor = "hsla(330, 40%, 60%, 0.1)";
 
     const draw = () => {
-      ctx.fillStyle = bgColor.replace("8%", "8% / 0.15)").replace("hsl", "hsla");
-      ctx.fillStyle = "rgba(20, 10, 15, 0.08)";
+      ctx.fillStyle = "hsla(40, 25%, 94%, 0.08)";
       ctx.fillRect(0, 0, W, H);
 
       ctx.strokeStyle = gridColor;
@@ -48,7 +47,7 @@ const HeartMonitor = () => {
       ctx.strokeStyle = lineColor;
       ctx.lineWidth = 2.5;
       ctx.shadowColor = lineColor;
-      ctx.shadowBlur = 15;
+      ctx.shadowBlur = 12;
 
       const mid = H / 2;
       for (let x = 0; x < W; x++) {
@@ -76,38 +75,22 @@ const HeartMonitor = () => {
   return (
     <section className="relative z-20 py-20 px-4 bg-background">
       <div className="max-w-3xl mx-auto text-center space-y-6">
-        <p
-          className="text-sm sm:text-base tracking-[0.3em] uppercase text-primary"
-          style={{
-            fontFamily: "'Courier New', monospace",
-            textShadow: "0 0 20px hsl(340, 100%, 65% / 0.6)",
-          }}
-        >
+        <p className="text-sm sm:text-base tracking-[0.3em] uppercase text-birthday-pink font-display">
           Mi corazón late por ti en tu cumpleaños...
         </p>
 
-        <div className="rounded-xl overflow-hidden border border-primary/30">
+        <div className="rounded-2xl overflow-hidden border-2 border-birthday-pink/20 shadow-md">
           <canvas ref={canvasRef} className="w-full h-auto" style={{ display: "block" }} />
         </div>
 
-        <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-primary/50"
-          style={{
-            boxShadow: "0 0 25px hsl(340, 100%, 65% / 0.2), inset 0 0 25px hsl(340, 100%, 65% / 0.05)",
-          }}
-        >
+        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-birthday-pink/10 border-2 border-birthday-pink/20">
           <span className="text-2xl">💗</span>
-          <span
-            className="text-xl sm:text-2xl font-display text-primary"
-            style={{ textShadow: "0 0 10px hsl(340, 100%, 65% / 0.5)" }}
-          >
+          <span className="text-xl sm:text-2xl font-display text-birthday-chocolate">
             11 • Febrero 🎂
           </span>
         </div>
 
-        <p
-          className="text-sm text-primary/60"
-          style={{ fontFamily: "'Courier New', monospace" }}
-        >
+        <p className="text-sm text-muted-foreground font-body">
           ...cada latido celebra tu existencia, Mary 🎉
         </p>
       </div>

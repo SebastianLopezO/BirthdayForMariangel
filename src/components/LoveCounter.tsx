@@ -37,12 +37,12 @@ const calculateTime = (): TimeUnits => {
 
 const CounterUnit = ({ value, label }: { value: number; label: string }) => (
   <div className="flex flex-col items-center">
-    <div className="bg-secondary/60 backdrop-blur-sm rounded-lg px-3 py-2 sm:px-5 sm:py-3 border border-primary/20 animate-glow-pulse">
-      <span className="text-2xl sm:text-4xl font-display text-primary font-bold">
+    <div className="bg-background rounded-2xl px-3 py-2 sm:px-5 sm:py-3 border-2 border-birthday-gold/30 shadow-md">
+      <span className="text-2xl sm:text-4xl font-display text-birthday-chocolate font-bold">
         {String(value).padStart(2, "0")}
       </span>
     </div>
-    <span className="text-xs sm:text-sm text-muted-foreground mt-1 font-body">{label}</span>
+    <span className="text-xs sm:text-sm text-muted-foreground mt-1.5 font-body font-semibold">{label}</span>
   </div>
 );
 
@@ -55,9 +55,9 @@ const LoveCounter = () => {
   }, []);
 
   return (
-    <div className="text-center space-y-4">
-      <h2 className="text-2xl sm:text-3xl font-display text-primary">
-        Desde que naciste han pasado...
+    <div className="text-center space-y-5">
+      <h2 className="text-2xl sm:text-3xl font-display text-birthday-chocolate">
+        Desde que naciste han pasado... 🎂
       </h2>
       <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
         <CounterUnit value={time.years} label="Años" />
@@ -67,8 +67,8 @@ const LoveCounter = () => {
         <CounterUnit value={time.minutes} label="Minutos" />
         <CounterUnit value={time.seconds} label="Segundos" />
       </div>
-      <p className="text-muted-foreground font-elegant text-lg italic">
-        ...y cada segundo el mundo es mejor contigo en él 🎂
+      <p className="text-muted-foreground font-cursive text-3xl">
+        ...y cada segundo el mundo es mejor contigo en él
       </p>
     </div>
   );
