@@ -1,5 +1,5 @@
 import BirthdayCake from "./BirthdayCake";
 
-const HeartTree = () => <BirthdayCake/>;
+const HeartTree = () => <BirthdayCake />;
 
 export default HeartTree;
