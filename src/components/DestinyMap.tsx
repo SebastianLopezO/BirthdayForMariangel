@@ -9,12 +9,12 @@ interface Destination {
 }
 
 const DESTINATIONS: Destination[] = [
-  { id: 1, name: "La esquina donde te miraba", description: "Desde ahí te admiraba en silencio, temeroso, sin atreverme a confesar lo que sentía ♥", x: 25, y: 35 },
-  { id: 2, name: "Cuando comenzamos a hablar", description: "Mi vida se llenó de ilusiones. Fuiste esquiva, pero fui poco a poco acercándome a ti.", x: 55, y: 25 },
-  { id: 3, name: "17 de diciembre de 2020", description: "El día que consolidamos nuestro amor. Hubo dificultades, pero todo valió la pena.", x: 75, y: 45 },
-  { id: 4, name: "Nuestras conversaciones eternas", description: "De día a noche, sin importar la hora ni el mes, hablábamos sin parar.", x: 40, y: 60 },
-  { id: 5, name: "Explorando juntos", description: "Fuimos descubriendo cosas que nunca habíamos hecho. La confianza y el amor lo permitieron todo.", x: 65, y: 70 },
-  { id: 6, name: "El futuro que imagino contigo", description: "Tengo una visión, y tú estás incluida en ella. Nuestro destino sigue escribiéndose ∞", x: 20, y: 65 },
+  { id: 1, name: "El día que te conocí", description: "Hace poco te conocí, pero no necesito más tiempo para saber lo genial que eres ✨", x: 25, y: 35 },
+  { id: 2, name: "Nuestras primeras conversaciones", description: "Hablando como amigos pero queriéndonos más que amigos, de día a noche sin parar.", x: 55, y: 25 },
+  { id: 3, name: "11 de febrero - Tu cumpleaños 🎂", description: "El día que el mundo recibió a una persona increíble. ¡Hoy lo celebramos!", x: 75, y: 45 },
+  { id: 4, name: "Las risas infinitas", description: "No hay nada más genial que hablar contigo, porque me río sin fin.", x: 40, y: 60 },
+  { id: 5, name: "Lo que me cautivó de ti", description: "Tu forma de ser, tu hermosura, tu personalidad... todo de ti me cautivó.", x: 65, y: 70 },
+  { id: 6, name: "Los cumpleaños que vendrán", description: "Quiero estar presente en cada año nuevo de tu vida, celebrándote siempre ∞", x: 20, y: 65 },
 ];
 
 const HeartPin = ({
@@ -65,7 +65,7 @@ const DestinyMap = () => {
     <section className="relative z-20 py-20 px-4 bg-secondary/20">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-display text-primary text-center mb-3">
-          Mapa de Nuestro Destino 🗺️
+          Mapa de Nuestros Momentos 🗺️🎂
         </h2>
         <p className="text-center text-muted-foreground font-elegant italic text-lg mb-12">
           Cada pin es un momento que nos une... toca uno para descubrirlo
@@ -140,7 +140,7 @@ const DestinyMap = () => {
         </div>
 
         <p className="text-center text-muted-foreground font-elegant italic text-sm mt-8">
-          Nuestra historia es un camino que hemos construido paso a paso... y apenas comienza 🌎💕
+          Nuestra historia apenas comienza... ¡y hoy celebramos un capítulo más! 🎂🎉
         </p>
       </div>
     </section>

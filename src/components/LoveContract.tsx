@@ -7,14 +7,14 @@ interface Clause {
 }
 
 const CLAUSES: Clause[] = [
-  { id: 1, text: "Prometo admirarte desde cualquier esquina, como el primer día", emoji: "👀" },
-  { id: 2, text: "Me comprometo a aguantar tus formas bizarras de demostrar amor (y amarlas)", emoji: "😅" },
-  { id: 3, text: "Acepto que me enseñes cosas de sol a sol sin quejarme (mucho)", emoji: "📚" },
-  { id: 4, text: "Juro no borrar jamás las fotos que tengo de ti, porque cada una es un recuerdo hermoso", emoji: "📸" },
-  { id: 5, text: "Prometo conversar contigo de día a noche sin importar la hora ni el mes", emoji: "💬" },
-  { id: 6, text: "Me comprometo a decirte 'te amo' de forma cariñosa y expresiva, como solo yo sé", emoji: "💕" },
-  { id: 7, text: "Acepto ser tu fan #1 y el pirata más afortunado por encontrar este tesoro", emoji: "🏴‍☠️" },
-  { id: 8, text: "Juro amarte más que ayer y menos que mañana, por siempre y para siempre", emoji: "∞" },
+  { id: 1, text: "Prometo hacerte reír sin fin cada día, como solo nosotros sabemos", emoji: "😂" },
+  { id: 2, text: "Me comprometo a celebrar cada cumpleaños tuyo como si fuera el más importante", emoji: "🎂" },
+  { id: 3, text: "Acepto seguir hablando contigo de día a noche, como amigos pero queriéndonos más", emoji: "💬" },
+  { id: 4, text: "Juro decirte siempre lo hermosa y genial que eres", emoji: "✨" },
+  { id: 5, text: "Prometo estar presente en cada momento importante de tu vida", emoji: "🤝" },
+  { id: 6, text: "Me comprometo a seguir admirando tu forma de ser única", emoji: "💕" },
+  { id: 7, text: "Acepto que me cautivaste y que no hay vuelta atrás", emoji: "💖" },
+  { id: 8, text: "Juro quererte más con cada año que cumplas, por siempre", emoji: "∞" },
 ];
 
 const LoveContract = () => {
@@ -42,10 +42,10 @@ const LoveContract = () => {
               <span className="text-xs font-body tracking-widest uppercase text-primary/80">Documento oficial</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-display text-primary mb-2">
-              Contrato de Amor 📜
+              Contrato de Cumpleaños 🎂📜
             </h2>
             <p className="font-elegant italic text-muted-foreground">
-              Cláusulas vigentes desde el 17 de diciembre de 2020 hasta la eternidad
+              Promesas vigentes desde tu cumpleaños hasta la eternidad
             </p>
           </div>
 
@@ -103,17 +103,17 @@ const LoveContract = () => {
                     : "bg-secondary text-muted-foreground cursor-not-allowed opacity-60"
                 }`}
               >
-                {allChecked ? "Firmar con amor ✍️💕" : `Faltan ${CLAUSES.length - checked.size} cláusulas...`}
+                {allChecked ? "Firmar con cariño ✍️🎂" : `Faltan ${CLAUSES.length - checked.size} promesas...`}
               </button>
             ) : (
               <div className="animate-fade-in-up space-y-4">
                 <div className="inline-block px-8 py-6 rounded-2xl bg-primary/10 border border-primary/30">
                   <p className="text-3xl mb-2">🎉</p>
                   <p className="text-xl font-display text-primary">
-                    ¡Contrato firmado!
+                    ¡Contrato de cumpleaños firmado! 🎉
                   </p>
                   <p className="font-elegant italic text-muted-foreground mt-1">
-                    Vigente desde hoy hasta la eternidad ∞
+                    Promesas vigentes desde hoy hasta la eternidad ∞
                   </p>
                   <div className="mt-3 font-display text-2xl text-primary/60 rotate-[-5deg]">
                     Mariangel ♥

@@ -83,7 +83,7 @@ const HeartMonitor = () => {
             textShadow: "0 0 20px hsl(340, 100%, 65% / 0.6)",
           }}
         >
-          Mi corazón late...
+          Mi corazón late por ti en tu cumpleaños...
         </p>
 
         <div className="rounded-xl overflow-hidden border border-primary/30">
@@ -100,7 +100,7 @@ const HeartMonitor = () => {
             className="text-xl sm:text-2xl font-display text-primary"
             style={{ textShadow: "0 0 10px hsl(340, 100%, 65% / 0.5)" }}
           >
-            14 • Febrero
+            11 • Febrero 🎂
           </span>
         </div>
 
@@ -108,7 +108,7 @@ const HeartMonitor = () => {
           className="text-sm text-primary/60"
           style={{ fontFamily: "'Courier New', monospace" }}
         >
-          ...cada latido lleva tu nombre, Mary
+          ...cada latido celebra tu existencia, Mary 🎉
         </p>
       </div>
     </section>

@@ -30,7 +30,7 @@ const ValentineMission = () => {
         <div className="absolute bottom-16 left-8 text-lg rotate-[20deg] opacity-40">✨</div>
 
         <h2 className="text-2xl sm:text-3xl font-body font-semibold mb-8 text-foreground">
-          ¿Aceptas la misión de ser mi San Valentín? 💘
+          ¿Aceptas celebrar tu cumpleaños conmigo? 🎂🎉
         </h2>
 
         {answer === null ? (
@@ -55,10 +55,10 @@ const ValentineMission = () => {
             <div className="inline-block px-8 py-6 rounded-2xl bg-card border border-border">
               <p className="text-3xl mb-2">🥰</p>
               <p className="text-xl font-display text-primary">
-                ¡Sabía que dirías que sí, mi mamor!
+                ¡Sabía que dirías que sí! 🎉
               </p>
               <p className="font-elegant italic mt-2 text-muted-foreground">
-                Contigo quiero estar la vida entera si es posible ♥
+                ¡Que este cumpleaños sea el mejor de todos, mi Mary! 🎂❤️
               </p>
             </div>
           </div>

@@ -60,10 +60,10 @@ const CupidMail = () => {
         </div>
 
         <h2 className="text-3xl sm:text-4xl font-display text-primary mb-3" style={{ textShadow: "0 2px 10px hsl(340, 80%, 60% / 0.4)" }}>
-          Correo de Cupido 💘
+          Carta de Cumpleaños 🎂💌
         </h2>
         <p className="text-muted-foreground font-elegant italic text-lg mb-10">
-          Tienes un mensaje especial...
+          Tienes un mensaje de cumpleaños especial...
         </p>
 
         {!accepted ? (
@@ -89,10 +89,10 @@ const CupidMail = () => {
             <div className="inline-block px-10 py-8 rounded-3xl bg-card/60 backdrop-blur-sm border border-border">
               <p className="text-4xl mb-3">😍</p>
               <p className="text-2xl font-display text-primary">
-                ¡El amor ha sido entregado!
+                ¡Felicidades han sido entregadas! 🎉
               </p>
               <p className="text-muted-foreground font-elegant italic mt-2">
-                Desde aquella esquina donde te miraba en silencio, hasta aquí... siempre tú 💖
+                Que cumplas muchos años más y que sigas siendo esa niña hermosa que conocí 🎂❤️
               </p>
             </div>
           </div>

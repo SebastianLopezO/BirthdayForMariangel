@@ -65,10 +65,10 @@ const GiftReveal = () => {
         >
           <div className="bg-card/60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-border">
             <p className="text-2xl sm:text-3xl font-display text-primary">
-              Ante mis ojos eres la mujer perfecta 🎁
+              ¡Sorpresa de cumpleaños! 🎁🎉
             </p>
             <p className="mt-3 font-elegant italic text-lg text-muted-foreground">
-              Que todos desean pero muy pocos pueden tener. Me siento afortunado de haberte encontrado, Mary.
+              Eres una gran persona que me cautivó. Que este día esté lleno de alegría, risas y todo lo bonito que mereces, Mary.
             </p>
           </div>
         </div>
@@ -80,7 +80,7 @@ const GiftReveal = () => {
         )}
 
         <p className="mt-10 text-2xl sm:text-3xl font-display text-primary">
-          Feliz San Valentín, te amo 💝
+          ¡Feliz Cumpleaños, te quiero mucho! 🎂❤️
         </p>
       </div>
     </section>

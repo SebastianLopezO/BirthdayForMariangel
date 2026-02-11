@@ -31,7 +31,7 @@ const EnvelopeIntro = ({ onOpen }: EnvelopeIntroProps) => {
       ))}
 
       <h1 className="text-3xl sm:text-5xl font-display text-primary mb-2 animate-gentle-bounce">
-        Feliz San Valentín 💕
+        ¡Feliz Cumpleaños! 🎂🎉
       </h1>
       <p className="text-lg sm:text-xl text-muted-foreground font-elegant italic mb-10">
         Un detalle especial para ti, Mariangel
@@ -51,7 +51,7 @@ const EnvelopeIntro = ({ onOpen }: EnvelopeIntroProps) => {
             }`}
           >
             <p className="text-foreground font-elegant text-center px-4 text-sm sm:text-base">
-              Para el amor de mi vida...
+              Para la cumpleañera más hermosa...
             </p>
           </div>
 
@@ -72,7 +72,7 @@ const EnvelopeIntro = ({ onOpen }: EnvelopeIntroProps) => {
             isOpening ? "scale-150 opacity-0" : "animate-pulse-heart"
           }`}
         >
-          💌
+          🎁
         </div>
       </div>
 

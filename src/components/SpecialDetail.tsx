@@ -36,10 +36,10 @@ const SpecialDetail = () => {
 
         <div className="px-12 sm:px-20">
           <h2 className="text-3xl sm:text-4xl font-display text-primary mb-4">
-            Feliz San Valentín 🌹
+            ¡Feliz Cumpleaños! 🎂🎉
           </h2>
           <p className="font-elegant text-lg sm:text-xl italic leading-relaxed mb-10 text-muted-foreground">
-            Eres ese faro que me orienta en mis noches más oscuras, la voz suave que calma mis tormentas
+            Hoy celebro el día en que el mundo recibió a una persona increíble
           </p>
 
           <button
@@ -59,10 +59,10 @@ const SpecialDetail = () => {
             <div className="rounded-2xl p-6 sm:p-8 border bg-card border-border">
               <p className="text-5xl mb-4">💖</p>
               <p className="font-display text-2xl sm:text-3xl mb-3 text-primary">
-                Mi corazoncito
+                Mi carta para ti 💌
               </p>
               <p className="font-elegant italic text-muted-foreground">
-                He conocido a muchas personas, pero ninguna se siente como tú. Extraño esa sonrisa, esa mirada, esos labios que me llevan al cielo. Te amo con todo lo que soy ♥
+                Hoy es un gran día para ti, es tu cumpleaños y te quiero decir un feliz día, que cumplas muchos años más, que sigas creciendo como persona y que sigas siendo esa niña hermosa que conocí. Sé que hace poco te conocí, pero no creo que necesite más tiempo para saber lo genial que eres. Eres una gran mujer que alegra mis días, día tras día hablando como amigos pero queriéndonos más que amigos. No hay nada más genial que hablar contigo, porque me río sin fin. Tu forma de ser no me deja parar de decir cuánto te quiero y lo hermosa que eres. Eres una gran persona que me cautivó, y a pesar de que todo esto fue virtual, desearía que hubiera sido en presencia para demostrarte cuánto te quiero. ¡Feliz cumpleaños, que pases un día genial! Te quiero mucho ❤️
               </p>
             </div>
           </div>

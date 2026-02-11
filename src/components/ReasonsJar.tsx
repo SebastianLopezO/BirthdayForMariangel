@@ -89,7 +89,7 @@ const ReasonsJar = () => {
     <section className="relative z-20 py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-display text-primary text-center mb-4">
-          Millones de razones para amarte 💕
+          Millones de razones para celebrarte 🎉
         </h2>
         <p className="text-center text-muted-foreground font-elegant italic text-lg mb-12">
           Pasa el cursor sobre los corazones para descubrir algunas...

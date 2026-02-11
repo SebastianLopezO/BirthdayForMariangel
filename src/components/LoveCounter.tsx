@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const START_DATE = new Date(2020, 11, 17); // December 17, 2020
+const START_DATE = new Date(2024, 1, 11); // February 11, 2024
 
 interface TimeUnits {
   years: number;
@@ -57,7 +57,7 @@ const LoveCounter = () => {
   return (
     <div className="text-center space-y-4">
       <h2 className="text-2xl sm:text-3xl font-display text-primary">
-        Mi amor por ti comenzó hace...
+        Desde que naciste han pasado...
       </h2>
       <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
         <CounterUnit value={time.years} label="Años" />
@@ -68,7 +68,7 @@ const LoveCounter = () => {
         <CounterUnit value={time.seconds} label="Segundos" />
       </div>
       <p className="text-muted-foreground font-elegant text-lg italic">
-        ...y cada segundo te amo más ♥
+        ...y cada segundo el mundo es mejor contigo en él 🎂
       </p>
     </div>
   );
